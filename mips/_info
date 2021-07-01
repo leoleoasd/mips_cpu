@@ -1,0 +1,85 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\modeltech_10.1a\examples
+T_opt
+VNJ84<G40zEobbe5a0FKB00
+04 4 4 work test fast 0
+=1-001c42fee29c-60ddc352-2aa-4f4
+o-quiet -auto_acc_if_foreign -work work
+n@_opt
+OE;O;10.1a;51
+Z1 dC:\modeltech_10.1a\examples
+vifu
+VzcKOMV6TO:?VH:]LBT>G61
+r1
+31
+ISUm[6`cQFcOBBZQ=H;@1S2
+Z2 dX:\MIPS_CPU_Verilog
+w1625145949
+8X:/MIPS_CPU_Verilog/ifu.v
+FX:/MIPS_CPU_Verilog/ifu.v
+L0 2
+Z3 OE;L;10.1a;51
+Z4 o-work work -L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF
+!i10b 1
+!s85 0
+!s100 CjXUZWLQa`MTU6Wei<D7;3
+!s108 1625146188.351000
+!s107 defines.v|X:/MIPS_CPU_Verilog/ifu.v|
+!s90 -reportprogress|300|-work|work|-vopt|X:/MIPS_CPU_Verilog/ifu.v|
+vim_1k
+!i10b 1
+VhWmVPd4oE5A1Xkle@lUIl2
+r1
+!s85 0
+31
+I?9mj8<afO0ZW;ml3nQXSe2
+R2
+w1624955278
+8X:/MIPS_CPU_Verilog/im_1k.v
+FX:/MIPS_CPU_Verilog/im_1k.v
+L0 1
+R3
+R4
+!s100 9B:l9e1N0ZakE;=DVMEf`0
+!s108 1625146188.430000
+!s107 X:/MIPS_CPU_Verilog/im_1k.v|
+!s90 -reportprogress|300|-work|work|-vopt|X:/MIPS_CPU_Verilog/im_1k.v|
+vmips
+II`J:@j?=RJ_<OQnRVKJ6^1
+V^lO[ZOI0I1e8M8GJjI9B:3
+R2
+w1624952386
+8X:/MIPS_CPU_Verilog/mips.v
+FX:/MIPS_CPU_Verilog/mips.v
+L0 1
+R3
+r1
+31
+R4
+!i10b 1
+!s100 M6G?CUOXhY=XkFGXe_1MP2
+!s85 0
+!s108 1625146188.508000
+!s107 X:/MIPS_CPU_Verilog/mips.v|
+!s90 -reportprogress|300|-work|work|-vopt|X:/MIPS_CPU_Verilog/mips.v|
+vtest
+Vk<3<[f=78GX=_HO53D;7>3
+r1
+31
+In]zRb[`X0ikC8FXDAgMWb2
+R2
+w1625146177
+8X:/MIPS_CPU_Verilog/test.v
+FX:/MIPS_CPU_Verilog/test.v
+L0 2
+R3
+R4
+!i10b 1
+!s85 0
+!s100 `l3<ZkZoiaimNS1Q<e4QO2
+!s108 1625146188.586000
+!s107 defines.v|X:/MIPS_CPU_Verilog/test.v|
+!s90 -reportprogress|300|-work|work|-vopt|X:/MIPS_CPU_Verilog/test.v|
