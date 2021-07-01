@@ -1,5 +1,5 @@
 
-`define assert(condition) if(condition) begin $finish(1); end
+`define word [31:0]
 
 `define OPCODE_SPECIAL 6'b000000
 `define OPCODE_ORI 6'b001101
@@ -24,3 +24,7 @@
 `define IFU_SEL_IRRELATIVE 2 // pc = {(pc+4)[31:30], inst[25:0],2'0}
 `define IFU_SEL_REGISTER 3 // pc = npc
 
+`define ALU_SEL_ADD 0
+`define ALU_SEL_SUB 1
+`define ALU_SEL_AND 2
+`define ALU_SEL_OR 3

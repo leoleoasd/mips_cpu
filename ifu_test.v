@@ -35,17 +35,17 @@ always begin
             0:
             begin
                 npc_sel = `IFU_SEL_RELATIVE;
-                assert(i1.pc == 'h3001);
+                assert(i1.pc == 'h3000);
             end
             1:
             begin
-                npc_sel = `IFU_SEL_IRRELATIVE;
+                npc_sel = `IFU_SEL_RELATIVE;
                 assert(i1.pc == 'h3008);
             end
             2:
             begin
-                npc_sel = `IFU_SEL_REGISTER;
-                assert(i1.pc == 'h1234<<2);
+                npc_sel = `IFU_SEL_NORM;
+                assert(i1.pc == 'h3004);
             end
             3:
             begin
@@ -54,15 +54,30 @@ always begin
             end
             4:
             begin
-                npc_sel = `IFU_SEL_NORM;
+                npc_sel = `IFU_SEL_IRRELATIVE;
                 assert(i1.pc == 'h300c);
             end
             5:
             begin
+                npc_sel = `IFU_SEL_REGISTER;
+                assert(i1.pc == 'h1234<<2);
+            end
+            6:
+            begin
+                npc_sel = `IFU_SEL_NORM;
+                assert(i1.pc == 'h3008);
+            end
+            7:
+            begin
+                npc_sel = `IFU_SEL_NORM;
+                assert(i1.pc == 'h300c);
+            end
+            8:
+            begin
                 npc_sel = `IFU_SEL_NORM;
                 assert(i1.pc == 'h3010);
             end
-            6:
+            9:
             begin
                 npc_sel = `IFU_SEL_NORM;
                 assert(i1.pc == 'h3014);
@@ -70,6 +85,8 @@ always begin
             end
             default: ;
         endcase
+
+        $display("");
         clk_count = clk_count + 1;
     end
 end

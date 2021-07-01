@@ -21,7 +21,7 @@ begin
     begin
         case (npc_sel)
             `IFU_SEL_NORM: pc <= pc + 4;
-            `IFU_SEL_RELATIVE: pc <= pc + 4 + (inst[15:0]<<2);
+            `IFU_SEL_RELATIVE: pc <= pc + 4 + ({ {16{inst[15]}}, inst[15:0] }<<2);
             `IFU_SEL_IRRELATIVE: pc <= {pc[31:29], inst[25:0], 2'b0};
             `IFU_SEL_REGISTER: pc <= npc;
             default: ;

@@ -12,14 +12,4 @@ Model Technology ModelSim SE vlog 10.1a Compiler 2012.02 Feb 22 2012
 Top level modules:
 	im_1k
 
-} {} {}} X:/MIPS_CPU_Verilog/defines.v {1 {vlog -work work -vopt X:/MIPS_CPU_Verilog/defines.v
-Model Technology ModelSim SE vlog 10.1a Compiler 2012.02 Feb 22 2012
-
-} {} {}} X:/MIPS_CPU_Verilog/ifu.v {1 {vlog -work work -vopt X:/MIPS_CPU_Verilog/ifu.v
-Model Technology ModelSim SE vlog 10.1a Compiler 2012.02 Feb 22 2012
--- Compiling module ifu
-
-Top level modules:
-	ifu
-
 } {} {}}
