@@ -8,13 +8,28 @@
 `define OPCODE_ADDI 6'b001000
 `define OPCODE_ADDIU 6'b001001
 `define OPCODE_JAL 6'b000011
+`define OPCODE_HLT 6'b011101
 
 `define FUNCT_ADDU 6'b100001
 `define FUNCT_SUBU 6'b100011
 `define FUNCT_SLT 6'b101010
 `define FUNCT_JR 6'b001000
 
-`define word 
+`define INST_NOP 0
+`define INST_ADDU 1
+`define INST_SUBU 2
+`define INST_ORI 3
+`define INST_LW 4
+`define INST_SW 5
+`define INST_BEQ 6
+`define INST_LUI 7
+`define INST_J 8
+`define INST_ADDI 9
+`define INST_ADDIU 10
+`define INST_SLT 11
+`define INST_JAL 12
+`define INST_JR 13
+`define INST_HLT 14
 
 `define IFU_SEL_NORM 0 // pc += 4
 `define IFU_SEL_RELATIVE 1 // pc = pc + 4 + sign_extend(inst[15:0])
