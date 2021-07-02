@@ -25,3 +25,8 @@
 `define ALU_SEL_SUB 1
 `define ALU_SEL_OR 2
 `define ALU_SEL_SLT 3
+
+`define EXT_SEL_ZERO 0
+`define EXT_SEL_SIGN 1
+`define EXT_SEL_LUI 2
+`define EXT_SEL_RESERVED 3
