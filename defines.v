@@ -1,6 +1,3 @@
-
-`define word [31:0]
-
 `define OPCODE_SPECIAL 6'b000000
 `define OPCODE_ORI 6'b001101
 `define OPCODE_LW 6'b100011
@@ -26,5 +23,5 @@
 
 `define ALU_SEL_ADD 0
 `define ALU_SEL_SUB 1
-`define ALU_SEL_AND 2
-`define ALU_SEL_OR 3
+`define ALU_SEL_OR 2
+`define ALU_SEL_SLT 3

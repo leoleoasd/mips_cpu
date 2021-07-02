@@ -1,9 +1,27 @@
 all: test
 
-test: ifu_test
+tests := ifu_test alu_test
 
-ifu_test: ifu_test.out
-	./ifu_test.out | grep -A 5 "ERROR" || exit 0
+ifu_test := im_1k.v
 
-ifu_test.out: ifu.v ifu_test.v im_1k.v defines.v
-	iverilog -g2012 -o ifu_test.out defines.v ifu.v im_1k.v ifu_test.v
+alu_test :=  
+
+# All things below are generic.
+
+$(foreach test,$(tests), $(eval $(test)+=$(test:_test=).v $(test).v defines.v))
+
+test: $(tests)
+
+define test_template
+$1: $1.out
+	./$1.out | grep -A 5 "ERROR" && exit 1 || exit 0
+$1.out: $$($1)
+	iverilog -g2012 -o $1.out $$^
+endef
+
+$(foreach test, $(tests), $(eval $(call test_template,$(test))))
+
+
+.PHONY : clean
+clean :
+	-rm $(foreach test, $(tests), $(test).out)
