@@ -33,3 +33,8 @@
 
 `define ALU_SRC_GPR 0
 `define ALU_SRC_EXT 1
+
+`define GPR_WRITE_ALU 0
+`define GPR_WRITE_MEM 1
+`define GPR_WRITE_PC 2
+`define GPR_WRITE_RESERVED 3
