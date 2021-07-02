@@ -30,3 +30,6 @@
 `define EXT_SEL_SIGN 1
 `define EXT_SEL_LUI 2
 `define EXT_SEL_RESERVED 3
+
+`define ALU_SRC_GPR 0
+`define ALU_SRC_EXT 1

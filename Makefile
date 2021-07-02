@@ -1,6 +1,6 @@
 all: test
 
-tests := ifu_test alu_test dm_test extender_test gpr_test
+tests := ifu_test alu_test dm_test extender_test gpr_test alu_src_mux_test
 
 ifu_test := im_1k.v
 
