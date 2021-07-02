@@ -19,7 +19,7 @@ define test_template
 $1: $1.out
 	./$1.out | grep -A 5 "ERROR" && exit 1 || exit 0
 $1.out: $$($1)
-	iverilog -g2012 -o $1.out $$^
+	iverilog -g2012 -o $1.out $1.v
 endef
 
 $(foreach test, $(tests), $(eval $(call test_template,$(test))))

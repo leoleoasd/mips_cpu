@@ -1,4 +1,5 @@
 `include "defines.v"
+`include "im_1k.v"
 module ifu(
     input clk,
     input reset,

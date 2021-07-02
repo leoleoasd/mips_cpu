@@ -1,4 +1,5 @@
 `include "defines.v"
+`include "ifu.v"
 module ifu_test;
 reg clk, reset;
 reg [1:0] npc_sel;

@@ -1,4 +1,5 @@
 `include "defines.v"
+`include "extender.v"
 module extender_test;
 
 reg [15:0] in;

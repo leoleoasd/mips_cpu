@@ -1,4 +1,5 @@
-module dm_test ();
+`include "dm.v"
+module dm_test;
 
 reg [9:0] addr;
 reg [31:0] dataWrite;
