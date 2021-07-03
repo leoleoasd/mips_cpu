@@ -53,3 +53,7 @@
 `define GPR_WRITE_MEM 1
 `define GPR_WRITE_PC 2
 `define GPR_WRITE_RESERVED 3
+
+`define GPR_WRITE_ADDR_RT 0
+`define GPR_WRITE_ADDR_RD 1
+`define GPR_WRITE_ADDR_GPR_RA 2

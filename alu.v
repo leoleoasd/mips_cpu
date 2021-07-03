@@ -12,7 +12,7 @@ module alu (
 wire [31:0] result[4];
 assign result[`ALU_SEL_ADD] = a + b;
 assign result[`ALU_SEL_SUB] = a - b;
-assign result[`ALU_SEL_OR] = a & b;
+assign result[`ALU_SEL_OR] = a | b;
 assign result[`ALU_SEL_SLT] = int'(a) < int'(b);
 
 assign out = result[sel];
