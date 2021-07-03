@@ -13,7 +13,7 @@ initial begin
         dm[i]=0;
 end
 
-always @(posedge clk)
+always@(posedge clk)
 begin
     if (WriteEn)
     begin

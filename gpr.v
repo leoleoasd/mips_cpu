@@ -14,14 +14,14 @@ initial begin
     for(i=0;i<32;i=i+1) regArr[i]=0;
 end
 
-always @(*) begin
-    if(RdAddr1!=0)RdData1=regArr[RdAddr1];
-    else RdData1=0;
-    if(RdAddr2!=0)RdData2=regArr[RdAddr2];
-    else RdData2=0;
+always@(*) begin
+    if(RdAddr1!=0)RdData1<=regArr[RdAddr1];
+    else RdData1<=0;
+    if(RdAddr2!=0)RdData2<=regArr[RdAddr2];
+    else RdData2<=0;
 end
 
-always @(posedge clk) begin
+always@(posedge clk) begin
     if(WrEn&&WrAddr!=0 && !(OFWrEn && OFFlag)) regArr[WrAddr]<=WrData;
     if(OFWrEn)regArr[30][0]<=OFFlag;
 end
