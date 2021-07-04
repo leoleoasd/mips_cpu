@@ -9,6 +9,8 @@
 `define OPCODE_ADDIU 6'b001001
 `define OPCODE_JAL 6'b000011
 `define OPCODE_HLT 6'b011101
+`define OPCODE_LB 6'b100000
+`define OPCODE_SB 6'b101000
 
 `define FUNCT_ADDU 6'b100001
 `define FUNCT_SUBU 6'b100011
@@ -30,6 +32,8 @@
 `define INST_JAL 12
 `define INST_JR 13
 `define INST_HLT 14
+`define INST_LB 15
+`define INST_SB 16
 
 `define IFU_SEL_NORM 0 // pc += 4
 `define IFU_SEL_RELATIVE 1 // pc = pc + 4 + sign_extend(inst[15:0])
@@ -57,3 +61,6 @@
 `define GPR_WRITE_ADDR_RT 0
 `define GPR_WRITE_ADDR_RD 1
 `define GPR_WRITE_ADDR_GPR_RA 2
+
+`define DM_WORD 0
+`define DM_BYTE 1

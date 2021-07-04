@@ -72,6 +72,12 @@ always begin
         `OPCODE_JAL: begin
             $display("Got instruction: jal %x", mips.decoder.inst[25:0] << 2);
         end
+        `OPCODE_LB: begin
+            $display("Got instruction: lb $%d, %d($%d)", mips.decoder.rt, mips.decoder.imm, mips.decoder.rs);
+        end
+        `OPCODE_SB: begin
+            $display("Got instruction: sb $%d, %d($%d)", mips.decoder.rt, mips.decoder.imm, mips.decoder.rs);
+        end
         `OPCODE_HLT: begin
             $display("Got instruction: HALT");
         end

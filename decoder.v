@@ -82,6 +82,12 @@ always@ (*) begin
             dec_inst<=`INST_HLT;
             //$display("Got instruction: HALT");
         end
+        `OPCODE_LB: begin
+            dec_inst <= `INST_LB;
+        end
+        `OPCODE_SB: begin
+            dec_inst <= `INST_SB;
+        end
         default: begin
             dec_inst<=`INST_NOP;
         end

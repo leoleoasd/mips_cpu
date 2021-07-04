@@ -32,6 +32,7 @@ assign dm_addr = alu_out[9:0];
 wire halt_sig;
 
 wire [31:0] alu_src;
+wire dm_sel;
 ifu ifu(clk, rst, npc_sel, gpr_read_data_1, inst, pc);
 decoder decoder(inst,dec_inst,rs,rt,rd,shamt,imm);
 controller controller(
@@ -41,6 +42,7 @@ controller controller(
     gpr_write_addr_sel,gpr_write_data_sel,
     alu_src_ctl, ext_ctl,
     npc_sel,
+    dm_sel,
     halt_sig
 );
 gpr gpr(
@@ -84,6 +86,7 @@ dm_1k dm(
     gpr_read_data_2,
     mem_write_en,
     clk,
+    dm_sel,
     memory_out
 );
 
