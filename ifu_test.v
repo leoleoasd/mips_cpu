@@ -9,7 +9,7 @@ ifu i1(
     .clk(clk),
     .reset(reset),
     .npc_sel(npc_sel),
-    .npc(regpc),
+    .register(regpc),
     .inst(insout)
 );
 

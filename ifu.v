@@ -1,10 +1,11 @@
 `include "defines.v"
 `include "im_1k.v"
+`include "npc.v"
 module ifu(
     input clk,
     input reset,
     input [1:0] npc_sel,
-    input [31:0] npc,
+    input [31:0] register,
     output [31:0] inst,
     output reg [31:0] pc
 );
@@ -16,21 +17,17 @@ im_1k im(
     .dout(inst)
 );
 
+wire [31:0] nextPC;
+npc npc(
+    pc, inst[15:0], inst[25:0], register, npc_sel, nextPC
+);
+
 always @(posedge clk, posedge reset)
 begin
-    if (reset) pc = 32'h3000;
+    if (reset) pc <= 32'h3000;
     else
     begin
-        case (npc_sel)
-            `IFU_SEL_NORM: pc <= pc + 4;
-            `IFU_SEL_RELATIVE: pc <= pc + 4 + ({ {16{inst[15]}}, inst[15:0] }<<2);
-            `IFU_SEL_IRRELATIVE: begin
-                $display ("IFU irrelative branching to %x", {pc[31:29], inst[25:0], 2'b0});
-                pc <= {pc[31:29], inst[25:0], 2'b0};
-            end
-            `IFU_SEL_REGISTER: pc <= npc;
-            default: ;
-        endcase
+        pc <= nextPC;
     end
 end
 endmodule

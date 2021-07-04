@@ -3,7 +3,7 @@ all: test
 tests := ifu alu dm extender gpr alu_src_mux gpr_write_mux mips
 
 # define extra dependences.
-ifu := im_1k.v
+ifu := im_1k.v npc.v
 mips := alu.v alu_src_mux.v controller.v decoder.v defines.v dm.v extender.v gpr.v gpr_write_addr_mux.v gpr_write_mux.v ifu.v im_1k.v mips.v
 # All things below are generic.
 
