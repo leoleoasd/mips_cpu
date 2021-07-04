@@ -11,72 +11,303 @@ o-quiet -auto_acc_if_foreign -work work
 n@_opt
 OE;O;10.1a;51
 Z1 dC:\modeltech_10.1a\examples
-vifu
-VzcKOMV6TO:?VH:]LBT>G61
+valu
+Z2 DXx6 sv_std 3 std 0 22 F[19LRNL:5;XmIFh[XOPn1
+V;<MTcj`oVb<Mj:;eAl:nY2
 r1
 31
-ISUm[6`cQFcOBBZQ=H;@1S2
-Z2 dX:\MIPS_CPU_Verilog
-w1625145949
-8X:/MIPS_CPU_Verilog/ifu.v
-FX:/MIPS_CPU_Verilog/ifu.v
+IAQgBHXBbEDg@=GS]CU9Yn2
+Z3 !s105 mips_test_v_unit
+S1
+Z4 dX:\MIPS_CPU_Verilog
+Z5 w1625384979
+Falu.v
+Z6 8X:/MIPS_CPU_Verilog/mips_test.v
+Z7 FX:/MIPS_CPU_Verilog/mips_test.v
 L0 2
-Z3 OE;L;10.1a;51
-Z4 o-work work -L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF
+Z8 OE;L;10.1a;51
+Z9 !s108 1625385375.637000
+Z10 !s107 im_1k.v|ifu.v|gpr_write_mux.v|gpr_write_addr_mux.v|gpr.v|extender.v|dm.v|decoder.v|controller.v|alu_src_mux.v|alu.v|defines.v|mips.v|X:/MIPS_CPU_Verilog/mips_test.v|
+Z11 !s90 -reportprogress|300|-work|work|-vopt|-sv|X:/MIPS_CPU_Verilog/mips_test.v|
+Z12 o-work work -sv -L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF
 !i10b 1
 !s85 0
-!s100 CjXUZWLQa`MTU6Wei<D7;3
-!s108 1625146188.351000
-!s107 defines.v|X:/MIPS_CPU_Verilog/ifu.v|
-!s90 -reportprogress|300|-work|work|-vopt|X:/MIPS_CPU_Verilog/ifu.v|
-vim_1k
+!s100 T?7^Ub?6On^F`N30^L9c=2
+valu_src_mux
+R2
+VA;bIkU[noO:Z?3DW>1Ph91
+r1
+31
+I3WoKg_LDE>fPA[U=BH8Ri2
+R3
+S1
+R4
+w1625385087
+Falu_src_mux.v
+R6
+R7
+L0 3
+R8
+R9
+R10
+R11
+R12
 !i10b 1
+!s85 0
+!s100 2HeGN<F3bAHJ@9GVdC94J1
+vcontroller
+R2
+VhfMz`DHPdk]knD>ocRQ8o2
+r1
+31
+I<UZ2[eN:3OBm7X=n:MR[62
+R3
+S1
+R4
+Z13 w1625309179
+Fcontroller.v
+R6
+R7
+L0 3
+R8
+R9
+R10
+R11
+R12
+!i10b 1
+!s85 0
+!s100 QHzW[]T<:CSJUBMS[]gY13
+vdecoder
+R2
+VOMoe>]Q1SVYco>Qifz62a1
+r1
+31
+I^]dgl^EhRaJG;iKAJ`lO[1
+R3
+S1
+R4
+R13
+Fdecoder.v
+R6
+R7
+L0 3
+R8
+R9
+R10
+R11
+R12
+!i10b 1
+!s85 0
+!s100 :g5B2FI`Q0[`gbA;n6oDl1
+vdm_1k
+R2
+!i10b 1
+Vdm]4WK[@H`?ll[e:6KF`o0
+r1
+!s85 0
+31
+I3`z5dO5E0mB1W@nI08:<]2
+R3
+S1
+R4
+R13
+Fdm.v
+R6
+R7
+L0 1
+R8
+R9
+R10
+R11
+R12
+!s100 mUBeVSalW8]W`Of^P]8zA0
+vextender
+R2
+Vz5QL_d4J2nM7o]eoP`RY93
+r1
+31
+IeDcffI[c@DBk:L3=9Y4i92
+R3
+S1
+R4
+R5
+Fextender.v
+R6
+R7
+L0 2
+R8
+R9
+R10
+R11
+R12
+!i10b 1
+!s85 0
+!s100 Y>ncCnF4aJ:=GfU0mJNT[0
+vgpr
+R2
+VUmfV2kcE4_I?U6naho]1;1
+r1
+31
+IVQZ4Fa`;Fg;2ae;G@TUlb0
+R3
+S1
+R4
+R13
+Fgpr.v
+R6
+R7
+L0 3
+R8
+R9
+R10
+R11
+R12
+!i10b 1
+!s85 0
+!s100 DTA@LQWmRg=RjLg`Z6G:W2
+vgpr_write_addr_mux
+R2
+VS[ABB;zM_^3mAc10cN1VC0
+r1
+31
+IeUVRZLIcooP73b<5KLdiU1
+R3
+S1
+R4
+R5
+Fgpr_write_addr_mux.v
+R6
+R7
+L0 3
+R8
+R9
+R10
+R11
+R12
+!i10b 1
+!s85 0
+!s100 [6XgeoDG^3Z=ONg3N?lMe2
+vgpr_write_mux
+R2
+VA>bVZnV_;IDFU6@f6I3CK3
+r1
+31
+I;T`G0F9>0GQ7NXW;?D;@E2
+R3
+S1
+R4
+R5
+Fgpr_write_mux.v
+R6
+R7
+L0 3
+R8
+R9
+R10
+R11
+R12
+!i10b 1
+!s85 0
+!s100 IG7X2nQ:IjI>EI>cDhVLX3
+vifu
+R2
+VVfA5[9`H:Oinb>KPgo`SI2
+r1
+31
+I_d[LI1m<JQICIGo;0a]>e1
+R3
+S1
+R4
+R13
+Fifu.v
+R6
+R7
+L0 3
+R8
+R9
+R10
+R11
+R12
+!i10b 1
+!s85 0
+!s100 TMPl31ShLm_>NE5?Z2E]M0
+vim_1k
+R2
 VhWmVPd4oE5A1Xkle@lUIl2
 r1
-!s85 0
 31
-I?9mj8<afO0ZW;ml3nQXSe2
-R2
-w1624955278
-8X:/MIPS_CPU_Verilog/im_1k.v
-FX:/MIPS_CPU_Verilog/im_1k.v
-L0 1
+I4z5WXMIaE>KH>bi`R`]0M0
 R3
+S1
 R4
-!s100 9B:l9e1N0ZakE;=DVMEf`0
-!s108 1625146188.430000
-!s107 X:/MIPS_CPU_Verilog/im_1k.v|
-!s90 -reportprogress|300|-work|work|-vopt|X:/MIPS_CPU_Verilog/im_1k.v|
-vmips
-II`J:@j?=RJ_<OQnRVKJ6^1
-V^lO[ZOI0I1e8M8GJjI9B:3
-R2
-w1624952386
-8X:/MIPS_CPU_Verilog/mips.v
-FX:/MIPS_CPU_Verilog/mips.v
+R13
+Fim_1k.v
+R6
+R7
 L0 1
-R3
+R8
+R9
+R10
+R11
+R12
+!i10b 1
+!s85 0
+!s100 b0kVO<V7K[>N@[C>`>zTI0
+vmips
+R2
+V^lO[ZOI0I1e8M8GJjI9B:3
 r1
 31
+IZV5iE@Mhf0^i6_PzTYYCj1
+R3
+S1
 R4
+R13
+Fmips.v
+R6
+R7
+L0 12
+R8
+R9
+R10
+R11
+R12
 !i10b 1
-!s100 M6G?CUOXhY=XkFGXe_1MP2
 !s85 0
-!s108 1625146188.508000
-!s107 X:/MIPS_CPU_Verilog/mips.v|
-!s90 -reportprogress|300|-work|work|-vopt|X:/MIPS_CPU_Verilog/mips.v|
+!s100 Tk1VY2kOE8=MlE3<15X`11
+vmips_test
+R2
+V`:lD@DzbQP_LH3clNf;Sh1
+r1
+31
+I6lOAGS8Y^aakF=H]ihUC`2
+R3
+S1
+R4
+R13
+R6
+R7
+L0 2
+R8
+R9
+R10
+R11
+R12
+!i10b 1
+!s85 0
+!s100 E2MS3fgPjSK9<^?Q_IJ8=1
 vtest
 Vk<3<[f=78GX=_HO53D;7>3
 r1
 31
 In]zRb[`X0ikC8FXDAgMWb2
-R2
+R4
 w1625146177
 8X:/MIPS_CPU_Verilog/test.v
 FX:/MIPS_CPU_Verilog/test.v
 L0 2
-R3
-R4
+R8
+o-work work -L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF
 !i10b 1
 !s85 0
 !s100 `l3<ZkZoiaimNS1Q<e4QO2

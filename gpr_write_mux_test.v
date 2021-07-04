@@ -24,7 +24,7 @@ initial begin
     assert(out == memory);
     sel = `GPR_WRITE_PC;
     #1;
-    assert(out == pc);
+    assert(out == pc + 4);
 end
 
 endmodule

@@ -4,7 +4,7 @@ module extender(
     input [1:0] sel,
     output [31:0] out
 );
-wire [31:0] result[4];
+wire [31:0] result[3:0];
 assign result[`EXT_SEL_ZERO] = {16'b0, in};
 assign result[`EXT_SEL_SIGN] = {{16{in[15]}}, in};
 assign result[`EXT_SEL_LUI] = {in, 16'b0};

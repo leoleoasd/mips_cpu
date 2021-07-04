@@ -50,7 +50,7 @@ always@ (*) begin
     end else if(dec_inst == `INST_ADDI) begin
         reg_of_en=1;
     end else if(dec_inst == `INST_ADDIU) begin
-        ;
+        
     end else if(dec_inst == `INST_SLT) begin
         alu_sel=`ALU_SEL_SLT;
         gpr_write_addr_sel=`GPR_WRITE_ADDR_RD;

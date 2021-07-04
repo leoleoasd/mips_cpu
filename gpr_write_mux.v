@@ -5,7 +5,7 @@ module gpr_write_mux (
     input [1:0] sel,
     output [31:0] out
 );
-wire [31:0] options[4];
+wire [31:0] options[3:0];
 assign options[`GPR_WRITE_ALU] = alu;
 assign options[`GPR_WRITE_MEM] = memory;
 assign options[`GPR_WRITE_PC] = pc + 4;

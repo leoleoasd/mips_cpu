@@ -6,7 +6,7 @@ module gpr_write_addr_mux(
     output reg [4:0] out
 );
 
-wire [4:0] options[4];
+wire [4:0] options[3:0];
 assign options[`GPR_WRITE_ADDR_RD] = rd;
 assign options[`GPR_WRITE_ADDR_RT] = rt;
 assign options[`GPR_WRITE_ADDR_GPR_RA] = 31;

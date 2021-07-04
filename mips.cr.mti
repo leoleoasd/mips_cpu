@@ -1,15 +1,119 @@
-X:/MIPS_CPU_Verilog/mips.v {1 {vlog -work work -vopt X:/MIPS_CPU_Verilog/mips.v
+X:/MIPS_CPU_Verilog/decoder.v {1 {vlog -work work -vopt -sv X:/MIPS_CPU_Verilog/decoder.v
 Model Technology ModelSim SE vlog 10.1a Compiler 2012.02 Feb 22 2012
--- Compiling module mips
+-- Compiling module decoder
 
 Top level modules:
-	mips
+	decoder
 
-} {} {}} X:/MIPS_CPU_Verilog/im_1k.v {1 {vlog -work work -vopt X:/MIPS_CPU_Verilog/im_1k.v
+} {} {}} X:/MIPS_CPU_Verilog/mips_test.v {1 {vlog -work work -vopt -sv X:/MIPS_CPU_Verilog/mips_test.v
+Model Technology ModelSim SE vlog 10.1a Compiler 2012.02 Feb 22 2012
+-- Compiling module alu
+-- Compiling module alu_src_mux
+-- Compiling module controller
+-- Compiling module decoder
+-- Compiling module dm_1k
+-- Compiling module extender
+-- Compiling module gpr
+-- Compiling module gpr_write_addr_mux
+-- Compiling module gpr_write_mux
+-- Compiling module im_1k
+-- Compiling module ifu
+-- Compiling module mips
+-- Compiling module mips_test
+
+Top level modules:
+	mips_test
+
+} {} {}} X:/MIPS_CPU_Verilog/im_1k.v {1 {vlog -work work -vopt -sv X:/MIPS_CPU_Verilog/im_1k.v
 Model Technology ModelSim SE vlog 10.1a Compiler 2012.02 Feb 22 2012
 -- Compiling module im_1k
 
 Top level modules:
 	im_1k
+
+} {} {}} X:/MIPS_CPU_Verilog/alu.v {1 {vlog -work work -vopt -sv X:/MIPS_CPU_Verilog/alu.v
+Model Technology ModelSim SE vlog 10.1a Compiler 2012.02 Feb 22 2012
+-- Compiling module alu
+
+Top level modules:
+	alu
+
+} {} {}} X:/MIPS_CPU_Verilog/gpr_write_mux.v {1 {vlog -work work -vopt -sv X:/MIPS_CPU_Verilog/gpr_write_mux.v
+Model Technology ModelSim SE vlog 10.1a Compiler 2012.02 Feb 22 2012
+-- Compiling module gpr_write_mux
+
+Top level modules:
+	gpr_write_mux
+
+} {} {}} X:/MIPS_CPU_Verilog/ifu.v {1 {vlog -work work -vopt -sv X:/MIPS_CPU_Verilog/ifu.v
+Model Technology ModelSim SE vlog 10.1a Compiler 2012.02 Feb 22 2012
+-- Compiling module im_1k
+-- Compiling module ifu
+
+Top level modules:
+	ifu
+
+} {} {}} X:/MIPS_CPU_Verilog/defines.v {1 {vlog -work work -vopt -sv X:/MIPS_CPU_Verilog/defines.v
+Model Technology ModelSim SE vlog 10.1a Compiler 2012.02 Feb 22 2012
+
+} {} {}} X:/MIPS_CPU_Verilog/gpr_write_addr_mux.v {1 {vlog -work work -vopt -sv X:/MIPS_CPU_Verilog/gpr_write_addr_mux.v
+Model Technology ModelSim SE vlog 10.1a Compiler 2012.02 Feb 22 2012
+-- Compiling module gpr_write_addr_mux
+
+Top level modules:
+	gpr_write_addr_mux
+
+} {} {}} X:/MIPS_CPU_Verilog/extender.v {1 {vlog -work work -vopt -sv X:/MIPS_CPU_Verilog/extender.v
+Model Technology ModelSim SE vlog 10.1a Compiler 2012.02 Feb 22 2012
+-- Compiling module extender
+
+Top level modules:
+	extender
+
+} {} {}} X:/MIPS_CPU_Verilog/mips.v {1 {vlog -work work -vopt -sv X:/MIPS_CPU_Verilog/mips.v
+Model Technology ModelSim SE vlog 10.1a Compiler 2012.02 Feb 22 2012
+-- Compiling module alu
+-- Compiling module alu_src_mux
+-- Compiling module controller
+-- Compiling module decoder
+-- Compiling module dm_1k
+-- Compiling module extender
+-- Compiling module gpr
+-- Compiling module gpr_write_addr_mux
+-- Compiling module gpr_write_mux
+-- Compiling module im_1k
+-- Compiling module ifu
+-- Compiling module mips
+
+Top level modules:
+	mips
+
+} {} {}} X:/MIPS_CPU_Verilog/dm.v {1 {vlog -work work -vopt -sv X:/MIPS_CPU_Verilog/dm.v
+Model Technology ModelSim SE vlog 10.1a Compiler 2012.02 Feb 22 2012
+-- Compiling module dm_1k
+
+Top level modules:
+	dm_1k
+
+} {} {}} X:/MIPS_CPU_Verilog/gpr.v {1 {vlog -work work -vopt -sv X:/MIPS_CPU_Verilog/gpr.v
+Model Technology ModelSim SE vlog 10.1a Compiler 2012.02 Feb 22 2012
+-- Compiling module gpr
+
+Top level modules:
+	gpr
+
+} {} {}} X:/MIPS_CPU_Verilog/alu_src_mux.v {1 {vlog -work work -vopt -sv X:/MIPS_CPU_Verilog/alu_src_mux.v
+Model Technology ModelSim SE vlog 10.1a Compiler 2012.02 Feb 22 2012
+-- Compiling module alu_src_mux
+
+Top level modules:
+	alu_src_mux
+
+} {} {}} X:/MIPS_CPU_Verilog/controller.v {1 {vlog -work work -vopt -sv X:/MIPS_CPU_Verilog/controller.v
+Model Technology ModelSim SE vlog 10.1a Compiler 2012.02 Feb 22 2012
+-- Compiling module controller
+
+Top level modules:
+	controller
 
 } {} {}}
