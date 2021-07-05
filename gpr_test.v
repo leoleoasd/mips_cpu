@@ -1,5 +1,4 @@
 `include "defines.v"
-`include "gpr.v"
 module gpr_test;
 
 reg clk,WrEn,OFWrEn,OFFlag;

@@ -1,4 +1,4 @@
-`include "dm.v"
+`include "defines.v"
 module dm_test;
 
 reg [9:0] addr;

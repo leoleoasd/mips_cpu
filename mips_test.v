@@ -1,4 +1,4 @@
-`include "mips.v"
+`include "defines.v"
 module mips_test;
 
 reg clk, reset;
@@ -13,8 +13,9 @@ initial begin
     clk_count = 0;
     #5 reset = 1;
     #5 reset = 0;
-    $readmemh("code1.txt", mips.ifu.im.im);
+    $readmemh("code.txt", mips.ifu.im.im);
 end
+reg hit = 0;
 integer i;
 always begin
     #30;
@@ -24,6 +25,7 @@ always begin
     $display("Clk                   %x", clk_count);
     $display("PC:                   %x", mips.pc);
     $display("Current Insturuction: %x", mips.ifu.inst);
+    $display("Current Stage: %x", mips.controller.stage);
     clk_count = clk_count + 1;
     case(mips.decoder.opcode)
         `OPCODE_SPECIAL: begin
@@ -94,11 +96,17 @@ always begin
     $display("GPR Write Addr: %d", mips.gpr_write_addr);
     $display("GPR Write Data: %d", mips.write_data);
     $display("GPR Write Data: %x", mips.write_data);
-    $display("npc_sel: %d", mips.npc_sel);
-
-    // if (mips.npc_sel != 0) begin
-    //     $stop;
-    // end
+    $display("memory_out: %x", mips.memory_out);
+    $display("memory_out_reg: %x", mips.memory_out_reg);
+    $display("alu_out: %x", mips.alu_out);
+    $display("alu_c: %x", mips.alu_c);
+    $display("dm_sel: %x", mips.dm_sel);
+    $display("dm_addr: %x", mips.dm_addr);
+    // $stop;
+    // if(mips.ifu.pc == 'h00003058 && mips.controller.stage == 0)
+    //     hit = 1;
+    if(hit)
+        $stop;
 end
 always @(posedge mips.halt_sig) begin
     $display("FINISH");

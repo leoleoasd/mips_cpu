@@ -1,5 +1,4 @@
 `include "defines.v"
-`include "alu_src_mux.v"
 module alu_src_mux_test;
 
 reg [31:0] GPRData, ExtData;

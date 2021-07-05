@@ -1,5 +1,4 @@
 `include "defines.v"
-`include "gpr_write_mux.v"
 module gpr_write_mux_test;
 
 reg [31:0] alu, memory, pc;

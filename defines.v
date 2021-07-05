@@ -64,3 +64,9 @@
 
 `define DM_WORD 0
 `define DM_BYTE 1
+
+`define STAGE_IF 0
+`define STAGE_DECODE 1
+`define STAGE_EXE 2
+`define STAGE_MEM 3
+`define STAGE_WB 4

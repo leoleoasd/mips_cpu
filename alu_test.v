@@ -1,5 +1,4 @@
 `include "defines.v"
-`include "alu.v"
 module alu_test;
 
 reg signed [31:0] a;

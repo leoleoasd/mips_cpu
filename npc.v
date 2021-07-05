@@ -8,12 +8,10 @@ module npc(
     input [1:0] npc_sel,
     output [31:0] npc
 );
-wire [31:0]pc_add_4;
-assign pc_add_4 = pc + 4;
 wire [31:0] options[4];
 assign options[`IFU_SEL_NORM] = pc + 4;
-assign options[`IFU_SEL_RELATIVE] = pc + 4 + ({ {16{offset[15]}}, offset }<<2);
-assign options[`IFU_SEL_IRRELATIVE] = {pc_add_4[31:29], irrelative, 2'b0};
+assign options[`IFU_SEL_RELATIVE] = pc + ({ {16{offset[15]}}, offset }<<2);
+assign options[`IFU_SEL_IRRELATIVE] = {pc[31:29], irrelative, 2'b0};
 assign options[`IFU_SEL_REGISTER] = register;
 
 assign npc = options[npc_sel];

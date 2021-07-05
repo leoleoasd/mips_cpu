@@ -1,7 +1,6 @@
 `include "defines.v"
-`include "ifu.v"
 module ifu_test;
-reg clk, reset;
+reg clk = 0, reset;
 reg [1:0] npc_sel;
 wire [31:0] insout;
 reg [31:0] regpc;
@@ -10,13 +9,14 @@ ifu i1(
     .reset(reset),
     .npc_sel(npc_sel),
     .register(regpc),
-    .inst(insout)
+    .inst(insout),
+    .pcWriteEn(1'b1),
+    .imNextEn(1'b1)
 );
 
 reg [31:0] clk_count;
 
 initial begin
-    clk = 1;
     reset = 0;
     npc_sel = `IFU_SEL_NORM;
     clk_count = 0;
@@ -24,72 +24,101 @@ initial begin
     #5 reset = 1;
     #5 reset = 0;
     $readmemh("ifu_test_code.txt", i1.im.im);
-end
-always begin
-    #30 clk = ~clk;
-    if (clk == 1)
-    begin
-        $display("Clk                   %x", clk_count);
-        $display("PC:                   %x", i1.pc);
-        $display("Current Insturuction: %x", insout);
-        case (clk_count)
-            0:
-            begin
-                npc_sel = `IFU_SEL_RELATIVE;
-                assert(i1.pc == 'h3000);
-            end
-            1:
-            begin
-                npc_sel = `IFU_SEL_RELATIVE;
-                assert(i1.pc == 'h3008);
-            end
-            2:
-            begin
-                npc_sel = `IFU_SEL_NORM;
-                assert(i1.pc == 'h3004);
-            end
-            3:
-            begin
-                npc_sel = `IFU_SEL_NORM;
-                assert(i1.pc == 'h3008);
-            end
-            4:
-            begin
-                npc_sel = `IFU_SEL_IRRELATIVE;
-                assert(i1.pc == 'h300c);
-            end
-            5:
-            begin
-                npc_sel = `IFU_SEL_REGISTER;
-                assert(i1.pc == 'h1234<<2);
-            end
-            6:
-            begin
-                npc_sel = `IFU_SEL_NORM;
-                assert(i1.pc == 'h3008);
-            end
-            7:
-            begin
-                npc_sel = `IFU_SEL_NORM;
-                assert(i1.pc == 'h300c);
-            end
-            8:
-            begin
-                npc_sel = `IFU_SEL_NORM;
-                assert(i1.pc == 'h3010);
-            end
-            9:
-            begin
-                npc_sel = `IFU_SEL_NORM;
-                assert(i1.pc == 'h3014);
-                $finish(0);
-            end
-            default: ;
-        endcase
 
-        $display("");
-        clk_count = clk_count + 1;
-    end
+    $display("PC:                   %x", i1.pc);
+    $display("Current Insturuction: %x", insout);
+
+    assert(i1.pc == 'h3000);
+
+    #30 clk = 1;
+    #30 clk = 0;
+    npc_sel = `IFU_SEL_RELATIVE;
+    #30 clk = 1;
+    #30 clk = 0;
+    assert(i1.pc == 'h3008);
+
+
+    $display("PC:                   %x", i1.pc);
+    $display("Current Insturuction: %x", insout);
+
+    npc_sel = `IFU_SEL_RELATIVE;
+    #30 clk = 1;
+    #30 clk = 0;
+    assert(i1.pc == 'h3004);
+
+
+    $display("PC:                   %x", i1.pc);
+    $display("Current Insturuction: %x", insout);
+
+    npc_sel = `IFU_SEL_NORM;
+    #30 clk = 1;
+    #30 clk = 0;
+    assert(i1.pc == 'h3008);
+    $display("PC:                   %x", i1.pc);
+    $display("Current Insturuction: %x", insout);
+
+
+    npc_sel = `IFU_SEL_NORM;
+    #30 clk = 1;
+    #30 clk = 0;
+    assert(i1.pc == 'h300c);
+    $display("PC:                   %x", i1.pc);
+    $display("Current Insturuction: %x", insout);
+
+
+    npc_sel = `IFU_SEL_NORM;
+    #30 clk = 1;
+    #30 clk = 0;
+    assert(i1.pc == 'h3010);
+    $display("PC:                   %x", i1.pc);
+    $display("Current Insturuction: %x", insout);
+
+
+    npc_sel = `IFU_SEL_IRRELATIVE;
+    #30 clk = 1;
+    #30 clk = 0;
+    assert(i1.pc == 'h1234<<2);
+    $display("PC:                   %x", i1.pc);
+    $display("Current Insturuction: %x", insout);
+
+
+    npc_sel = `IFU_SEL_REGISTER;
+    #30 clk = 1;
+    #30 clk = 0;
+    assert(i1.pc == 'h3008);
+    $display("PC:                   %x", i1.pc);
+    $display("Current Insturuction: %x", insout);
+
+
+    npc_sel = `IFU_SEL_NORM;
+    #30 clk = 1;
+    #30 clk = 0;
+    assert(i1.pc == 'h300c);
+    $display("PC:                   %x", i1.pc);
+    $display("Current Insturuction: %x", insout);
+
+
+    npc_sel = `IFU_SEL_NORM;
+    #30 clk = 1;
+    #30 clk = 0;
+    assert(i1.pc == 'h3010);
+    $display("PC:                   %x", i1.pc);
+    $display("Current Insturuction: %x", insout);
+
+
+    npc_sel = `IFU_SEL_NORM;
+    #30 clk = 1;
+    #30 clk = 0;
+    assert(i1.pc == 'h3014);
+    $display("PC:                   %x", i1.pc);
+    $display("Current Insturuction: %x", insout);
+
+
+    npc_sel = `IFU_SEL_NORM;
+    #30 clk = 1;
+    #30 clk = 0;
+    $finish(0);
+
 end
 
 endmodule

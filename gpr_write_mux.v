@@ -8,7 +8,7 @@ module gpr_write_mux (
 wire [31:0] options[3:0];
 assign options[`GPR_WRITE_ALU] = alu;
 assign options[`GPR_WRITE_MEM] = memory;
-assign options[`GPR_WRITE_PC] = pc + 4;
+assign options[`GPR_WRITE_PC] = pc;
 assign options[`GPR_WRITE_RESERVED] = 0;
 assign out = options[sel];
 endmodule
