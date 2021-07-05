@@ -13,7 +13,7 @@ initial begin
     clk_count = 0;
     #5 reset = 1;
     #5 reset = 0;
-    $readmemh("code1.txt", mips.ifu.im.im);
+    $readmemh("jalr_test.txt", mips.ifu.im.im);
 end
 integer i;
 always begin
@@ -40,6 +40,9 @@ always begin
                 end
                 `FUNCT_JR: begin
                     $display("Got instruction: jr $%d", mips.decoder.rs);
+                end
+                `FUNCT_JALR: begin
+                    $display("Gor instruction:  jalr $%d", mips.decoder.rs);
                 end
                 default:begin
                 end

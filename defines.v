@@ -16,6 +16,7 @@
 `define FUNCT_SUBU 6'b100011
 `define FUNCT_SLT 6'b101010
 `define FUNCT_JR 6'b001000
+`define FUNCT_JALR 6'b001001
 
 `define INST_NOP 0
 `define INST_ADDU 1
@@ -34,6 +35,7 @@
 `define INST_HLT 14
 `define INST_LB 15
 `define INST_SB 16
+`define INST_JALR 17
 
 `define IFU_SEL_NORM 0 // pc += 4
 `define IFU_SEL_RELATIVE 1 // pc = pc + 4 + sign_extend(inst[15:0])

@@ -64,6 +64,10 @@ always@ (*) begin
     end else if(dec_inst == `INST_JR) begin
         reg_write_en=0;
         npc_sel = `IFU_SEL_REGISTER;
+    end else if(dec_inst == `INST_JALR) begin
+        gpr_write_addr_sel = `GPR_WRITE_ADDR_GPR_RA;
+        gpr_write_data_sel = `GPR_WRITE_PC;
+        npc_sel = `IFU_SEL_REGISTER;
     end else if(dec_inst == `INST_HLT) begin
         halt_sig = 1;
     end else if(dec_inst == `INST_SB) begin
