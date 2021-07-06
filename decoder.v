@@ -37,6 +37,9 @@ always@ (*) begin
                     dec_inst<=(rt==0&&rd==0)?(`INST_JR):(`INST_NOP);
                     //$display("Got instruction: jr $%d", rs);
                 end
+                `FUNCT_SRAV: begin
+                    dec_inst <= (shamt == 0) ? (`INST_SRAV) : (`INST_NOP);
+                end
                 default:begin
                      dec_inst<=`INST_NOP;
                 end

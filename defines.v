@@ -16,6 +16,7 @@
 `define FUNCT_SUBU 6'b100011
 `define FUNCT_SLT 6'b101010
 `define FUNCT_JR 6'b001000
+`define FUNCT_SRAV 6'b000111
 
 `define INST_NOP 0
 `define INST_ADDU 1
@@ -34,6 +35,7 @@
 `define INST_HLT 14
 `define INST_LB 15
 `define INST_SB 16
+`define INST_SRAV 17
 
 `define IFU_SEL_NORM 0 // pc += 4
 `define IFU_SEL_RELATIVE 1 // pc = pc + 4 + sign_extend(inst[15:0])
@@ -44,6 +46,7 @@
 `define ALU_SEL_SUB 1
 `define ALU_SEL_OR 2
 `define ALU_SEL_SLT 3
+`define ALU_SEL_SAR 4
 
 `define EXT_SEL_ZERO 0
 `define EXT_SEL_SIGN 1
@@ -52,6 +55,7 @@
 
 `define ALU_SRC_GPR 0
 `define ALU_SRC_EXT 1
+`define ALU_SRC_RS 2
 
 `define GPR_WRITE_ALU 0
 `define GPR_WRITE_MEM 1

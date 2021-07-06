@@ -13,7 +13,7 @@ initial begin
     clk_count = 0;
     #5 reset = 1;
     #5 reset = 0;
-    $readmemh("code.txt", mips.ifu.im.im);
+    $readmemh("srav_test.txt", mips.ifu.im.im);
 end
 reg hit = 0;
 integer i;

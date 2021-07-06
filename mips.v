@@ -4,7 +4,8 @@ module mips(
     input rst
 );
 
-wire [1:0] npc_sel, alu_sel, gpr_write_addr_sel, gpr_write_data_sel;
+wire [1:0] npc_sel, gpr_write_addr_sel, gpr_write_data_sel;
+wire [2:0] alu_sel;
 wire [31:0] inst, pc;
 wire [5:0] dec_inst;
 wire [4:0] rs,rt,rd,shamt;

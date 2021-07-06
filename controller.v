@@ -5,7 +5,7 @@ module controller(
     input [5:0] dec_inst, 
     input zero,
     output wire pc_write_en, im_next_en, reg_write_en,reg_of_en,mem_write_en,
-    output reg [1:0] alu_sel,
+    output reg [2:0] alu_sel,
     output reg [1:0] gpr_write_addr_sel,gpr_write_data_sel,
     output reg alu_src_ctl, 
     output reg [1:0] ext_ctl,
@@ -100,6 +100,10 @@ always@ (*) begin
     end else if(dec_inst == `INST_LB) begin
         gpr_write_data_sel = `GPR_WRITE_MEM;
         dm_sel = `DM_BYTE;
+    end else if(dec_inst == `INST_SRAV) begin
+        gpr_write_addr_sel = `GPR_WRITE_ADDR_RD;
+        alu_src_ctl = `ALU_SRC_RS;
+        alu_sel = `ALU_SEL_SAR;
     end else begin
         $display("BAD INSTRUCTION");
         reg_write_en_reg=0;
@@ -126,7 +130,8 @@ always@(posedge clk or posedge reset)
                     dec_inst == `INST_ADDI ||
                     dec_inst == `INST_ADDIU ||
                     dec_inst == `INST_SLT ||
-                    dec_inst == `INST_JAL
+                    dec_inst == `INST_JAL ||
+                    dec_inst == `INST_SRAV
                 )
                     stage <= `STAGE_WB;
                 else if (
